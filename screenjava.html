@@ -83,15 +83,46 @@
     <p>Args list 3:
     <ul class="parameterlist">
       <li>String string - whatever string you want</li>
-      <li>Rectangle rect</li>
+      <li>Rectangle rect - a rectangle that the string will center itself in</li>
     </ul>
-    <p>Example: drawString("Hi", );
+    <p>Example: drawString("Hi", r); //with r being a rectangle defined somewhere else in your code, "Hi" will be centered in it
     <p>Args list 4:</p>
-    
+    <ul class="parameterlist">
+      <li>String string - whatever string you want</li>
+      <li>Font font - the font you want the text to be in</li>
+      <li>Color color - the color you want the text to be</li>
+      <li>Rectangle rect - a rectangle that the string will center itself in</li>
+    </ul>
+    <p>Example: drawString("Hi", "Rockwell", Color.black, r); //with r being a rectangle defined somewhere else in your code, "Hi" will be in the Rockwell font in black and centered in it</p>
+    <p>Args list 5:</p>
+    <ul class="parameterlist">
+      <li>String string - whatever string you want</li>
+      <li>Font font - the font you want the text to be in</li>
+      <li>Color color - the color you want the text to be</li>
+      <li>Rectangle rect - a rectangle that the string will center itself in</li>
+      <li>int y - </li>
+    </ul>
+  </div>
+  <!-- drawTexture(); -->
+  <div id="drawtexture()method">
+    <h3>drawTexture();</h3>
+    <p>The drawTexture(); method is also quite self-explanatory. It will render a texture! This method takes the parameters:</p>
+    <p>Args list 1:</p>
+    <ul class="parameterlist">
+      <li>int x - x co-ordinate of start</li>
+      <li>int y - y co-ordinate of start</li>
+      <li>Texture texture - the texture (image) you want to load</li>
+    </ul>
+    <p>Example: drawTexture(0, 0, "/sprites/image.png");</p>
+    <p>Args list 2:</p>
+    <ul class="parameterlist">
+      li>int x - x co-ordinate of start</li>
+      <li>int y - y co-ordinate of start</li>
+      <li>Texture texture - the texture (image) you want to load</li>
+      <li>boolean flipX - if true, will flip the texture along the x-axis</li>
+    </ul>
+    <p>Example: drawTexture(0, 0, "/sprites/image.png", false);</p>
   </div>
   <!-- -->
-  <div id="">
-
-  </div>
 </body>
 </html>
