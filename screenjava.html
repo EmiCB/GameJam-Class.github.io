@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Game Jam! | Home</title>
+  <title>Game Jam! | Screen.Java</title>
 </head>
 <body>
   <!-- NAVIGATION BAR -->
@@ -13,7 +13,7 @@
   <!-- CONTENT -->
   <!-- intro -->
   <div id="intro">
-    <h3>Intro</h3>
+    <h2>Intro</h2>
     <p>Screen.Java is a class that will handle the screen of your game (essentially, it IS the screen of your game). As well as creating your game's screen, this class also has some useful methods that will help with visuals and memory control.</p>
   </div>
   <!-- clear(); -->
@@ -24,7 +24,7 @@
   <!-- drawRect(); -->
   <div id="drawrect()method">
     <h3>drawRect();</h3>
-    <p> The drawRect(); method draws the border of a rectangle on your screen. This method takes the parameters:</p>
+    <p>The drawRect(); method draws the border of a rectangle on your screen. This is usually used to draw out visible hitboxes or areas. This method takes the parameters:</p>
     <ul class="parameterlist">
       <li>int x - x co-ordinate of start</li>
       <li>int y - y co-ordinate of start</li>
@@ -32,9 +32,66 @@
       <li>int height - # of pixels tall (y-axis)</li>
       <li>int color - color of the outline (in hexidecimal format)</li>
     </ul>
-    <p>Example: drawRect(0, 0, 10, 20, 0x000000); //makes a rectangle at (0, 0) which is 10 px wide and 20 px tall and is black</p>
+    <p>Example: drawRect(0, 0, 10, 20, 0x000000); //makes the border of a rectangle that starts at (0, 0) which is 10 px wide and 20 px tall and is black</p>
   </div>
   <!-- fillRect(); -->
+  <div id="fillrect()method">
+    <h3>fillRect();</h3>
+    <p>The fillRect(); method functions exactly like the drawRect(); method, except instead of making the outline of a rectangle, it will make a filled in rectangle. This is usually used to make backgrounds or show areas. This method takes the parameters:</p>
+    <ul class="parameterlist">
+      <li>int x - x co-ordinate of start</li>
+      <li>int y - y co-ordinate of start</li>
+      <li>int width - # of pixels wide (x-axis)</li>
+      <li>int height - # of pixels tall (y-axis)</li>
+      <li>int color - color of the outline (in hexidecimal format)</li>
+    </ul>
+    <p>Example: fillRect(0, 0, 10, 20, 0x000000); //makes a solid rectangle that starts at (0, 0) which is 10 px wide and 20 px tall and is black</p>
+  </div>
+  <!-- fillRectBlend(); -->
+  <div id="fillrectblend()method">
+    <h3>fillRectBlend</h3>
+    <p>The fillRectBlend(); method functions exactly the same as the fillRect(); method, except that it makes the rectangle slightly transparent. This method takes the parameters:</p>
+    <ul class="parameterlist">
+      <li>int x - x co-ordinate of start</li>
+      <li>int y - y co-ordinate of start</li>
+      <li>int width - # of pixels wide (x-axis)</li>
+      <li>int height - # of pixels tall (y-axis)</li>
+      <li>int color - color of the outline (in hexidecimal format)</li>
+    </ul>
+    <p>Example: fillRect(0, 0, 10, 20, 0x000000); //makes a solid rectangle that starts at (0, 0) which is 10 px wide and 20 px tall and is black, but transparent</p>
+  </div>
+  <!-- drawString() -->
+  <div id="drawstring()method">
+    <h3>drawString()</h3>
+    <p>There are several possible arguments for this method -- each one taking different parameters. The first use of the drawString(); method is pretty self explanatory -- it will draw a string. This method takes the parameters:</p>
+    <p>Args list 1:</p>
+    <ul class="parameterlist">
+      <li>String string - whatever string you want</li>
+      <li>int x - x co-ordinate of start</li>
+      <li>int y - y co-ordinate of start</li>
+    </ul>
+    <p>Example: drawString("Hi", 0, 0); //makes a string that says "Hi" that will start at (0, 0)</p>
+    <p>Args list 2:</p>
+    <ul class="parameterlist">
+      <li>String string - whatever string you want</li>
+      <li>int x - x co-ordinate of start</li>
+      <li>int y - y co-ordinate of start</li>
+      <li>Font font - the font you want the text to be in</li>
+      <li>Color color - the color you want the text to be</li>
+    </ul>
+    <p>Example: drawString("Hi", 0, 0, "Rockwell", Color.black); //makes a string that says "Hi" in black using the Rockwell font and will start at (0, 0)
+    <p>Args list 3:
+    <ul class="parameterlist">
+      <li>String string - whatever string you want</li>
+      <li>Rectangle rect</li>
+    </ul>
+    <p>Example: drawString("Hi", );
+    <p>Args list 4:</p>
+    
+  </div>
+  <!-- -->
+  <div id="">
 
+  </div>
 </body>
 </html>
