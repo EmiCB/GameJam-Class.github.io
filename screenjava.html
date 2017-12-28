@@ -16,118 +16,120 @@
   </div>
 
   <!-- CONTENT -->
-  <!-- intro -->
-  <div id="intro">
-    <h2>Intro</h2>
-    <p>Screen.Java is a class that will handle the screen of your game (essentially, it IS the screen of your game). As well as creating your game's screen, this class also has some useful methods that will help with visuals and memory control.</p>
+  <div class="pagecontent">
+    <!-- intro -->
+    <div id="intro">
+      <h2>Intro</h2>
+      <p>Screen.Java is a class that will handle the screen of your game (essentially, it IS the screen of your game). As well as creating your game's screen, this class also has some useful methods that will help with visuals and memory control.</p>
+    </div>
+    <!-- clear(); -->
+    <div id="clear()method">
+      <h3>clear();</h3>
+      <p>The clear(); method is pretty simple; all it does is clear the screen. This makes sure that the game doesn't overload and crash from rendering too many things at once.</p>
+    </div>
+    <!-- drawRect(); -->
+    <div id="drawrect()method">
+      <h3>drawRect();</h3>
+      <p>The drawRect(); method draws the border of a rectangle on your screen. This is usually used to draw out visible hitboxes or areas. This method takes the parameters:</p>
+      <ul class="parameterlist">
+        <li>int x - x co-ordinate of start</li>
+        <li>int y - y co-ordinate of start</li>
+        <li>int width - # of pixels wide (x-axis)</li>
+        <li>int height - # of pixels tall (y-axis)</li>
+        <li>int color - color of the outline (in hexidecimal format)</li>
+      </ul>
+      <p>Example: drawRect(0, 0, 10, 20, 0x000000); //makes the border of a rectangle that starts at (0, 0) which is 10 px wide and 20 px tall and is black</p>
+    </div>
+    <!-- fillRect(); -->
+    <div id="fillrect()method">
+      <h3>fillRect();</h3>
+      <p>The fillRect(); method functions exactly like the drawRect(); method, except instead of making the outline of a rectangle, it will make a filled in rectangle. This is usually used to make backgrounds or show areas. This method takes the parameters:</p>
+      <ul class="parameterlist">
+        <li>int x - x co-ordinate of start</li>
+        <li>int y - y co-ordinate of start</li>
+        <li>int width - # of pixels wide (x-axis)</li>
+        <li>int height - # of pixels tall (y-axis)</li>
+        <li>int color - color of the outline (in hexidecimal format)</li>
+      </ul>
+      <p>Example: fillRect(0, 0, 10, 20, 0x000000); //makes a solid rectangle that starts at (0, 0) which is 10 px wide and 20 px tall and is black</p>
+    </div>
+    <!-- fillRectBlend(); -->
+    <div id="fillrectblend()method">
+      <h3>fillRectBlend</h3>
+      <p>The fillRectBlend(); method functions exactly the same as the fillRect(); method, except that it makes the rectangle slightly transparent. This method takes the parameters:</p>
+      <ul class="parameterlist">
+        <li>int x - x co-ordinate of start</li>
+        <li>int y - y co-ordinate of start</li>
+        <li>int width - # of pixels wide (x-axis)</li>
+        <li>int height - # of pixels tall (y-axis)</li>
+        <li>int color - color of the outline (in hexidecimal format)</li>
+      </ul>
+      <p>Example: fillRect(0, 0, 10, 20, 0x000000); //makes a solid rectangle that starts at (0, 0) which is 10 px wide and 20 px tall and is black, but transparent</p>
+    </div>
+    <!-- drawString() -->
+    <div id="drawstring()method">
+      <h3>drawString()</h3>
+      <p>There are several possible arguments for this method -- each one taking different parameters. The first use of the drawString(); method is pretty self explanatory -- it will draw a string. This method takes the parameters:</p>
+      <p>Args list 1:</p>
+      <ul class="parameterlist">
+        <li>String string - whatever string you want</li>
+        <li>int x - x co-ordinate of start</li>
+        <li>int y - y co-ordinate of start</li>
+      </ul>
+      <p>Example: drawString("Hi", 0, 0); //makes a string that says "Hi" that will start at (0, 0)</p>
+      <p>Args list 2:</p>
+      <ul class="parameterlist">
+        <li>String string - whatever string you want</li>
+        <li>int x - x co-ordinate of start</li>
+        <li>int y - y co-ordinate of start</li>
+        <li>Font font - the font you want the text to be in</li>
+        <li>Color color - the color you want the text to be</li>
+      </ul>
+      <p>Example: drawString("Hi", 0, 0, "Rockwell", Color.black); //makes a string that says "Hi" in black using the Rockwell font and will start at (0, 0)
+      <p>Args list 3:
+      <ul class="parameterlist">
+        <li>String string - whatever string you want</li>
+        <li>Rectangle rect - a rectangle that the string will center itself in</li>
+      </ul>
+      <p>Example: drawString("Hi", r); //with r being a rectangle defined somewhere else in your code, "Hi" will be centered in it
+      <p>Args list 4:</p>
+      <ul class="parameterlist">
+        <li>String string - whatever string you want</li>
+        <li>Font font - the font you want the text to be in</li>
+        <li>Color color - the color you want the text to be</li>
+        <li>Rectangle rect - a rectangle that the string will center itself in</li>
+      </ul>
+      <p>Example: drawString("Hi", "Rockwell", Color.black, r); //with r being a rectangle defined somewhere else in your code, "Hi" will be in the Rockwell font in black and centered in it</p>
+      <p>Args list 5:</p>
+      <ul class="parameterlist">
+        <li>String string - whatever string you want</li>
+        <li>Font font - the font you want the text to be in</li>
+        <li>Color color - the color you want the text to be</li>
+        <li>Rectangle rect - a rectangle that the string will center itself in</li>
+        <li>int y - </li>
+      </ul>
+    </div>
+    <!-- drawTexture(); -->
+    <div id="drawtexture()method">
+      <h3>drawTexture();</h3>
+      <p>The drawTexture(); method is also quite self-explanatory. It will render a texture! This method takes the parameters:</p>
+      <p>Args list 1:</p>
+      <ul class="parameterlist">
+        <li>int x - x co-ordinate of start</li>
+        <li>int y - y co-ordinate of start</li>
+        <li>Texture texture - the texture (image) you want to load</li>
+      </ul>
+      <p>Example: drawTexture(0, 0, "/sprites/image.png"); //draws the image starting at the co-ordinates (0,0)</p>
+      <p>Args list 2:</p>
+      <ul class="parameterlist">
+        li>int x - x co-ordinate of start</li>
+        <li>int y - y co-ordinate of start</li>
+        <li>Texture texture - the texture (image) you want to load</li>
+        <li>boolean flipX - if true, will flip the texture along the x-axis</li>
+      </ul>
+      <p>Example: drawTexture(0, 0, "/sprites/image.png", false); //draws the image starting at the co-ordinates (0,0) and does not flip it</p>
+    </div>
+    <!-- -->
   </div>
-  <!-- clear(); -->
-  <div id="clear()method">
-    <h3>clear();</h3>
-    <p>The clear(); method is pretty simple; all it does is clear the screen. This makes sure that the game doesn't overload and crash from rendering too many things at once.</p>
-  </div>
-  <!-- drawRect(); -->
-  <div id="drawrect()method">
-    <h3>drawRect();</h3>
-    <p>The drawRect(); method draws the border of a rectangle on your screen. This is usually used to draw out visible hitboxes or areas. This method takes the parameters:</p>
-    <ul class="parameterlist">
-      <li>int x - x co-ordinate of start</li>
-      <li>int y - y co-ordinate of start</li>
-      <li>int width - # of pixels wide (x-axis)</li>
-      <li>int height - # of pixels tall (y-axis)</li>
-      <li>int color - color of the outline (in hexidecimal format)</li>
-    </ul>
-    <p>Example: drawRect(0, 0, 10, 20, 0x000000); //makes the border of a rectangle that starts at (0, 0) which is 10 px wide and 20 px tall and is black</p>
-  </div>
-  <!-- fillRect(); -->
-  <div id="fillrect()method">
-    <h3>fillRect();</h3>
-    <p>The fillRect(); method functions exactly like the drawRect(); method, except instead of making the outline of a rectangle, it will make a filled in rectangle. This is usually used to make backgrounds or show areas. This method takes the parameters:</p>
-    <ul class="parameterlist">
-      <li>int x - x co-ordinate of start</li>
-      <li>int y - y co-ordinate of start</li>
-      <li>int width - # of pixels wide (x-axis)</li>
-      <li>int height - # of pixels tall (y-axis)</li>
-      <li>int color - color of the outline (in hexidecimal format)</li>
-    </ul>
-    <p>Example: fillRect(0, 0, 10, 20, 0x000000); //makes a solid rectangle that starts at (0, 0) which is 10 px wide and 20 px tall and is black</p>
-  </div>
-  <!-- fillRectBlend(); -->
-  <div id="fillrectblend()method">
-    <h3>fillRectBlend</h3>
-    <p>The fillRectBlend(); method functions exactly the same as the fillRect(); method, except that it makes the rectangle slightly transparent. This method takes the parameters:</p>
-    <ul class="parameterlist">
-      <li>int x - x co-ordinate of start</li>
-      <li>int y - y co-ordinate of start</li>
-      <li>int width - # of pixels wide (x-axis)</li>
-      <li>int height - # of pixels tall (y-axis)</li>
-      <li>int color - color of the outline (in hexidecimal format)</li>
-    </ul>
-    <p>Example: fillRect(0, 0, 10, 20, 0x000000); //makes a solid rectangle that starts at (0, 0) which is 10 px wide and 20 px tall and is black, but transparent</p>
-  </div>
-  <!-- drawString() -->
-  <div id="drawstring()method">
-    <h3>drawString()</h3>
-    <p>There are several possible arguments for this method -- each one taking different parameters. The first use of the drawString(); method is pretty self explanatory -- it will draw a string. This method takes the parameters:</p>
-    <p>Args list 1:</p>
-    <ul class="parameterlist">
-      <li>String string - whatever string you want</li>
-      <li>int x - x co-ordinate of start</li>
-      <li>int y - y co-ordinate of start</li>
-    </ul>
-    <p>Example: drawString("Hi", 0, 0); //makes a string that says "Hi" that will start at (0, 0)</p>
-    <p>Args list 2:</p>
-    <ul class="parameterlist">
-      <li>String string - whatever string you want</li>
-      <li>int x - x co-ordinate of start</li>
-      <li>int y - y co-ordinate of start</li>
-      <li>Font font - the font you want the text to be in</li>
-      <li>Color color - the color you want the text to be</li>
-    </ul>
-    <p>Example: drawString("Hi", 0, 0, "Rockwell", Color.black); //makes a string that says "Hi" in black using the Rockwell font and will start at (0, 0)
-    <p>Args list 3:
-    <ul class="parameterlist">
-      <li>String string - whatever string you want</li>
-      <li>Rectangle rect - a rectangle that the string will center itself in</li>
-    </ul>
-    <p>Example: drawString("Hi", r); //with r being a rectangle defined somewhere else in your code, "Hi" will be centered in it
-    <p>Args list 4:</p>
-    <ul class="parameterlist">
-      <li>String string - whatever string you want</li>
-      <li>Font font - the font you want the text to be in</li>
-      <li>Color color - the color you want the text to be</li>
-      <li>Rectangle rect - a rectangle that the string will center itself in</li>
-    </ul>
-    <p>Example: drawString("Hi", "Rockwell", Color.black, r); //with r being a rectangle defined somewhere else in your code, "Hi" will be in the Rockwell font in black and centered in it</p>
-    <p>Args list 5:</p>
-    <ul class="parameterlist">
-      <li>String string - whatever string you want</li>
-      <li>Font font - the font you want the text to be in</li>
-      <li>Color color - the color you want the text to be</li>
-      <li>Rectangle rect - a rectangle that the string will center itself in</li>
-      <li>int y - </li>
-    </ul>
-  </div>
-  <!-- drawTexture(); -->
-  <div id="drawtexture()method">
-    <h3>drawTexture();</h3>
-    <p>The drawTexture(); method is also quite self-explanatory. It will render a texture! This method takes the parameters:</p>
-    <p>Args list 1:</p>
-    <ul class="parameterlist">
-      <li>int x - x co-ordinate of start</li>
-      <li>int y - y co-ordinate of start</li>
-      <li>Texture texture - the texture (image) you want to load</li>
-    </ul>
-    <p>Example: drawTexture(0, 0, "/sprites/image.png"); //draws the image starting at the co-ordinates (0,0)</p>
-    <p>Args list 2:</p>
-    <ul class="parameterlist">
-      li>int x - x co-ordinate of start</li>
-      <li>int y - y co-ordinate of start</li>
-      <li>Texture texture - the texture (image) you want to load</li>
-      <li>boolean flipX - if true, will flip the texture along the x-axis</li>
-    </ul>
-    <p>Example: drawTexture(0, 0, "/sprites/image.png", false); //draws the image starting at the co-ordinates (0,0) and does not flip it</p>
-  </div>
-  <!-- -->
 </body>
 </html>

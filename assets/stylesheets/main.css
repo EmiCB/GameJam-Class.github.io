@@ -2,10 +2,60 @@ html, body {
   width: 100%;
   height: 100%;
 	margin: 0;
+
+  background: #262626; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #6441A5, #262626); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #6441A5, #262626); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #6441A5, #262626); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #6441A5, #262626); /* Standard syntax */
+
+  /*
+  * Grad 1: #53346d -> #262626
+  * Grad 2: #6441A5 -> #6441A5
+  */
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 body {
   font-family: 'Roboto Slab', serif;
 }
 /* Navbar */
-.navbar {
+.navbar ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #222;
+}
+.navbar li {
+  float: left;
+}
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar li a:hover {
+  background-color: #111;
+}
+/* Content */
+.pagecontent{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+
+  border-radius: 35px;
+	margin-top: 10px;
+	margin-bottom: 5%;
+	padding-top: 10px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 10px;
+  background-color: rgba(255,255,255,.7);
+	height: auto;
+
+	overflow: hidden;
 }
