@@ -21,6 +21,9 @@ body {
   font-family: 'Roboto Slab', serif;
 }
 /* Navbar */
+.navbar {
+  font-size: ;
+}
 .navbar ul{
   list-style-type: none;
   margin: 0;
@@ -40,6 +43,22 @@ body {
 }
 .navbar li a:hover {
   background-color: #111;
+}
+.navbar li a:active {
+
+}
+/* Sidebar */
+
+/* scrollbar */
+body::-webkit-scrollbar {
+    width: 0em;
+}
+.popup::-webkit-scrollbar {
+    width: 1em;
+}
+.scrollable {
+    height: 100px;
+    overflow-y: auto;
 }
 /* Content */
 .pagecontent{

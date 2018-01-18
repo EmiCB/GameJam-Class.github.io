@@ -1,29 +1,115 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <title>Game Jam! | Home</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-</head>
-<body>
-  <!-- NAVIGATION BAR -->
-  <div class="navbar">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="gamedesign.html">Game Design</a></li>
-      <li><a href="docs.html">Documentation</a></li>
-    </ul>
-  </div>
+        <title>Game Jam! | Docs</title>
 
-  <!-- CONTENT -->
-  <div class="pagecontent">
-    <!-- intro -->
-    <p>Welcome! This website was made as a reference souce fom my Game Jam! class!</p>
-    <!-- helpful links -->
-    <p>Read everything on this site? Here are some helpful links to get you started as a game dev!</p>
-    <ul>
-      <li><a href="http://www.indiegamejams.com/">IndieJams.com</a> - a whole calendar full of varous game jams to try out!</li>
-    </ul>
-  </div>
-</body>
+         <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Custom CSS & Stuff -->
+        <link rel="stylesheet" href="mods.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Game Jam! API</h3>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">screen.java</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li><a href="api.html">Intro</a></li>
+                            <li><a href="#">clear();</a></li>
+                            <li><a href="#">drawRect();</a></li>
+                            <li><a href="#">fillRect();</a></li>
+                            <li><a href="#">fillRectBlend();</a></li>
+                            <li><a href="#">drawString();</a></li>
+                            <li><a href="#">drawTexture();</a></li>
+                        </ul>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">window.java</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li><a href="#">Intro</a></li>
+                            <li><a href="#">setWindowSize();</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!--
+                <ul class="list-unstyled CTAs">
+                    <li><a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a></li>
+                    <li><a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a></li>
+                </ul>
+                -->
+            </nav>
+
+            <!-- Page Content Holder -->
+            <div id="content">
+
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+
+                        <div class="navbar-header">
+                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                                <i class="glyphicon glyphicon-align-left"></i>
+                            </button>
+                        </div>
+
+                        <!--
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#">Page</a></li>
+                                <li><a href="#">Page</a></li>
+                                <li><a href="#">Page</a></li>
+                                <li><a href="#">Page</a></li>
+                            </ul>
+                        </div>
+                        -->
+                    </div>
+                </nav>
+
+                <h2>Intro</h2>
+                <p>Welcome to the docs! This website was made to help people in my Game Jam! class find out the functions of different pre-coded methods to make thier game development easier. Well, thats about it for an introduction... happy coding!</p>
+
+                <div class="line"></div>
+
+                <h2>Helpful Links</h2>
+                <p>Read everything on this site? Here are some helpful links to get you started as a game dev!</p>
+                <ul class="linklist">
+                  <li><a href="http://www.indiegamejams.com/">IndieJams.com</a> - a whole calendar full of varous game jams to try out!</li>
+                  <li><a href="https://ldjam.com/">Ludum Dare</a> - a long running game jam that happens every 4 moths or so</li>
+                  <li><a href="http://www.onegameamonth.com/">One Game A Month</a> - a game jam that runs every month</li>
+                  <li><a href="https://gamedevelopment.tutsplus.com/articles/1gam-how-to-succeed-at-making-one-game-a-month--gamedev-3695">How to Succeed at Making one Game a Month</a> - an article written by the guy who runs One Game a Month</li>
+                </ul>
+
+            </div>
+        </div>
+
+
+
+
+
+        <!-- jQuery CDN -->
+         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+         <!-- Bootstrap Js CDN -->
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+         <script type="text/javascript">
+             $(document).ready(function () {
+                 $('#sidebarCollapse').on('click', function () {
+                     $('#sidebar').toggleClass('active');
+                 });
+             });
+         </script>
+    </body>
 </html>

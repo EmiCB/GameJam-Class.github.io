@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Game Jam! | Docs</title>
+
+         <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Custom CSS & Stuff -->
+        <link rel="stylesheet" href="mods.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Game Jam! API</h3>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">screen.java</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li><a href="api.html">Intro</a></li>
+                            <li><a href="#">clear();</a></li>
+                            <li><a href="#">drawRect();</a></li>
+                            <li><a href="#">fillRect();</a></li>
+                            <li><a href="#">fillRectBlend();</a></li>
+                            <li><a href="#">drawString();</a></li>
+                            <li><a href="#">drawTexture();</a></li>
+                        </ul>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">window.java</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li><a href="#">Intro</a></li>
+                            <li><a href="#">setWindowSize();</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <!-- Page Content Holder -->
+            <div id="content">
+
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+
+                        <div class="navbar-header">
+                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                                <i class="glyphicon glyphicon-align-left"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </nav>
+
+                <h2>screen.java</h2>
+                <p>screen.java is a class that will handle the screen of your game (essentially, it IS the screen of your game). As well as creating your game's screen, this class also has some useful methods that will help with visuals and memory control.</p>
+
+                <div class="line"></div>
+
+                <h3>clear();</h3>
+                <p>The clear(); method is pretty simple; all it does is clear the screen. This makes sure that the game doesn't overload and crash from rendering too many things at once.</p>
+                <h4>Usage:</h4>
+                <div class="example">
+                    clear();
+                </div>
+
+                <div class="line"></div>
+
+                <h3>drawRect();</h3>
+                <p>The drawRect(); method draws the border of a rectangle on your screen. This is usually used to draw out visible hitboxes or areas. This method takes the parameters:</p>
+                <ul class="parameterlist">
+                    <li>int x - x co-ordinate of start</li>
+                    <li>int y - y co-ordinate of start</li>
+                    <li>int width - # of pixels wide (x-axis)</li>
+                    <li>int height - # of pixels tall (y-axis)</li>
+                    <li>int color - color of the outline (in hexidecimal format)</li>
+                </ul>
+                <h4>Usage:</h4>
+                <div class="example">
+                    drawRect(0, 0, 10, 20, 0x000000);
+                    <br>
+                    <div class="comment">
+                        // makes the border of a rectangle that starts at (0, 0) which is 10 px wide and 20 px tall and is black
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <h3>fillRect();</h3>
+                <p>The fillRect(); method functions exactly like the drawRect(); method, except instead of making the outline of a rectangle, it will make a filled in rectangle. This is usually used to make backgrounds or show areas. This method takes the parameters:</p>
+                <ul class="parameterlist">
+                    <li>int x - x co-ordinate of start</li>
+                    <li>int y - y co-ordinate of start</li>
+                    <li>int width - # of pixels wide (x-axis)</li>
+                    <li>int height - # of pixels tall (y-axis)</li>
+                    <li>int color - color of the outline (in hexidecimal format)</li>
+                </ul>
+                <div class="example">
+                    fillRect(0, 0, 10, 20, 0x000000);
+                    <br>
+                    <div class="comment">
+                        //makes a solid rectangle that starts at (0, 0) which is 10 px wide and 20 px tall and is black
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <h3>fillRectBlend();</h3>
+                <p>The fillRectBlend(); method functions exactly the same as the fillRect(); method, except that it makes the rectangle slightly transparent. This method takes the parameters:</p>
+                    <ul class="parameterlist">
+                    <li>int x - x co-ordinate of start</li>
+                    <li>int y - y co-ordinate of start</li>
+                    <li>int width - # of pixels wide (x-axis)</li>
+                    <li>int height - # of pixels tall (y-axis)</li>
+                    <li>int color - color of the outline (in hexidecimal format)</li>
+                </ul>
+                <h4>Usage:</h4>
+                <div class="example">
+                    fillRect(0, 0, 10, 20, 0x000000);
+                    <br>
+                    <div class="comment">
+                        // makes a solid rectangle that starts at (0, 0) which is 10 px wide and 20 px tall and is black, but transparent
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <h3>drawString();</h3>
+                <p>There are several possible arguments for this method -- each one taking different parameters. The first use of the drawString(); method is pretty self explanatory -- it will draw a string. This method takes the parameters:</p>
+                <p>Args list 1:</p>
+                <ul class="parameterlist">
+                    <li>String string - whatever string you want</li>
+                    <li>int x - x co-ordinate of start</li>
+                    <li>int y - y co-ordinate of start</li>
+                </ul>
+                <div class="example">
+                    drawString("Hi", 0, 0);
+                    <br>
+                    <div class="comment">
+                        //makes a string that says "Hi" that will start at (0, 0)
+                    </div>
+                </div>
+                <p>Args list 2:</p>
+                <ul class="parameterlist">
+                    <li>String string - whatever string you want</li>
+                    <li>int x - x co-ordinate of start</li>
+                    <li>int y - y co-ordinate of start</li>
+                    <li>Font font - the font you want the text to be in</li>
+                    <li>Color color - the color you want the text to be</li>
+                </ul>
+                <div class="example">
+                    drawString("Hi", 0, 0, "Rockwell", Color.black);
+                    <br>
+                    <div class="comment">
+                        //makes a string that says "Hi" in black using the Rockwell font and will start at (0, 0)
+                    </div>
+                </div>
+                <p>Args list 3:</p>
+                <ul class="parameterlist">
+                    <li>String string - whatever string you want</li>
+                    <li>Rectangle rect - a rectangle that the string will center itself in</li>
+                </ul>
+                <div class="example">
+                    drawString("Hi", r);
+                    <br>
+                    <div class="comment">
+                        //with r being a rectangle defined somewhere else in your code, "Hi" will be centered in it
+                    </div>
+                </div>
+                <p>Args list 4:</p>
+                <ul class="parameterlist">
+                    <li>String string - whatever string you want</li>
+                    <li>Font font - the font you want the text to be in</li>
+                    <li>Color color - the color you want the text to be</li>
+                    <li>Rectangle rect - a rectangle that the string will center itself in</li>
+                </ul>
+                <div class="example">
+                    drawString("Hi", "Rockwell", Color.black, r);
+                    <br>
+                    <div class="comment">
+                        //with r being a rectangle defined somewhere else in your code, "Hi" will be in the Rockwell font in black and centered in it
+                    </div>
+                </div>
+                <p>Args list 5:</p>
+                <ul class="parameterlist">
+                    <li>String string - whatever string you want</li>
+                    <li>Font font - the font you want the text to be in</li>
+                    <li>Color color - the color you want the text to be</li>
+                    <li>Rectangle rect - a rectangle that the string will center itself in</li>
+                    <li>int y - </li>
+                </ul>
+                <div class="example">
+
+                    <br>
+                    <div class="comment">
+                        //
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <h3>drawTexture();</h3>
+                <p>The drawTexture(); method is also quite self-explanatory. It will render a texture! This method takes the parameters:</p>
+                <p>Args list 1:</p>
+                <ul class="parameterlist">
+                    <li>int x - x co-ordinate of start</li>
+                    <li>int y - y co-ordinate of start</li>
+                    <li>Texture texture - the texture (image) you want to load</li>
+                </ul>
+                <div class="example">
+                    drawTexture(0, 0, "/sprites/image.png");
+                    <br>
+                    <div class="comment">
+                        //draws the image starting at the co-ordinates (0,0)
+                    </div>
+                </div>
+                <p>Args list 2:</p>
+                <ul class="parameterlist">
+                    <li>int x - x co-ordinate of start</li>
+                    <li>int y - y co-ordinate of start</li>
+                    <li>Texture texture - the texture (image) you want to load</li>
+                    <li>boolean flipX - if true, will flip the texture along the x-axis</li>
+                </ul>
+                <div class="example">
+                    drawTexture(0, 0, "/sprites/image.png", false);
+                    <br>
+                    <div class="comment">
+                        //draws the image starting at the co-ordinates (0,0) and does not flip it
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <h2>window.java</h2>
+                <p>window.java is a class that creates and handles the window of your game.</p>
+
+                <div class="line"></div>
+
+                <h3>setWindowSize();</h3>
+                <p>The setWindowSize(); method simply sets the size of your game's window. This method takes the parameters:</p>
+                <ul class="parameterlist">
+                    <li>int width - how wide you want your window to be -- usually a multiple of 32 or 64</li>
+                    <li>int height - how tall you want your window to be -- usually a multiple of 32 or 64</li>
+                </ul>
+                <div class="example">
+                    setWindowSize(960, 540);
+                    <br>
+                    <div class="comment">
+                        //your game window will be 960x540 px
+                    </div>
+                </div>
+
+              </div>
+
+            </div>
+        </div>
+
+
+
+
+
+        <!-- jQuery CDN -->
+         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+         <!-- Bootstrap Js CDN -->
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+         <script type="text/javascript">
+             $(document).ready(function () {
+                 $('#sidebarCollapse').on('click', function () {
+                     $('#sidebar').toggleClass('active');
+                 });
+             });
+         </script>
+    </body>
+</html>
