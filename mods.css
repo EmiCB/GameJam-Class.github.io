@@ -14,7 +14,7 @@ p {
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999;
+    color: #404040;
 }
 
 a, a:hover, a:focus {
@@ -172,6 +172,9 @@ a.article, a.article:hover {
     -webkit-stroke-color: #ab5fff;
     -webkit-fill-color: #ab5fff;
     text-shadow: 1px 0px 20px #ab5fff;
+}
+.linklist a:visited {
+    color: 	#737373;
 }
 
 /* ---------------------------------------------------
