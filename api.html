@@ -5,13 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <title>Game Jam! | Docs</title>
+        <title>Game Jam! | API</title>
 
          <!-- Bootstrap CSS CDN -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- Custom CSS & Stuff -->
         <link rel="stylesheet" href="mods.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     </head>
     <body>
 
@@ -30,18 +31,21 @@
                         <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">screen.java</a>
                         <ul class="collapse list-unstyled" id="homeSubmenu">
                             <li><a href="api.html">Intro</a></li>
-                            <li><a href="#">clear();</a></li>
-                            <li><a href="#">drawRect();</a></li>
-                            <li><a href="#">fillRect();</a></li>
-                            <li><a href="#">fillRectBlend();</a></li>
-                            <li><a href="#">drawString();</a></li>
-                            <li><a href="#">drawTexture();</a></li>
+                            <li><a href="#clear">clear();</a></li>
+                            <li><a href="#drawrect">drawRect();</a></li>
+                            <li><a href="#fillrect">fillRect();</a></li>
+                            <li><a href="#fillrectblend">fillRectBlend();</a></li>
+                            <li><a href="#drawstring">drawString();</a></li>
+                            <li><a href="#drawtexture">drawTexture();</a></li>
                         </ul>
                         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">window.java</a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li><a href="#">Intro</a></li>
-                            <li><a href="#">setWindowSize();</a></li>
+                            <li><a href="#windowjava">Intro</a></li>
+                            <li><a href="#setwindowsize">setWindowSize();</a></li>
                         </ul>
+                    </li>
+                    <li>
+                        <a href="ppts.html">Power Points</a>
                     </li>
                 </ul>
 
@@ -67,7 +71,7 @@
 
                 <div class="line"></div>
 
-                <h3>clear();</h3>
+                <a name="clear"><h3>clear();</h3></a>
                 <p>The clear(); method is pretty simple; all it does is clear the screen. This makes sure that the game doesn't overload and crash from rendering too many things at once.</p>
                 <h4>Usage:</h4>
                 <div class="example">
@@ -76,7 +80,7 @@
 
                 <div class="line"></div>
 
-                <h3>drawRect();</h3>
+                <a name="drawrect"><h3>drawRect();</h3></a>
                 <p>The drawRect(); method draws the border of a rectangle on your screen. This is usually used to draw out visible hitboxes or areas. This method takes the parameters:</p>
                 <ul class="parameterlist">
                     <li>int x - x co-ordinate of start</li>
@@ -96,7 +100,7 @@
 
                 <div class="line"></div>
 
-                <h3>fillRect();</h3>
+                <a name="fillrect"><h3>fillRect();</h3></a>
                 <p>The fillRect(); method functions exactly like the drawRect(); method, except instead of making the outline of a rectangle, it will make a filled in rectangle. This is usually used to make backgrounds or show areas. This method takes the parameters:</p>
                 <ul class="parameterlist">
                     <li>int x - x co-ordinate of start</li>
@@ -115,7 +119,7 @@
 
                 <div class="line"></div>
 
-                <h3>fillRectBlend();</h3>
+                <a name="fillrectblend"><h3>fillRectBlend();</h3></a>
                 <p>The fillRectBlend(); method functions exactly the same as the fillRect(); method, except that it makes the rectangle slightly transparent. This method takes the parameters:</p>
                     <ul class="parameterlist">
                     <li>int x - x co-ordinate of start</li>
@@ -135,7 +139,7 @@
 
                 <div class="line"></div>
 
-                <h3>drawString();</h3>
+                <a name="drawstring"><h3>drawString();</h3></a>
                 <p>There are several possible arguments for this method -- each one taking different parameters. The first use of the drawString(); method is pretty self explanatory -- it will draw a string. This method takes the parameters:</p>
                 <p>Args list 1:</p>
                 <ul class="parameterlist">
@@ -209,7 +213,7 @@
 
                 <div class="line"></div>
 
-                <h3>drawTexture();</h3>
+                <a name="drawtexture"><h3>drawTexture();</h3></a>
                 <p>The drawTexture(); method is also quite self-explanatory. It will render a texture! This method takes the parameters:</p>
                 <p>Args list 1:</p>
                 <ul class="parameterlist">
@@ -241,12 +245,12 @@
 
                 <div class="line"></div>
 
-                <h2>window.java</h2>
+                <a name="windowjava"><h2>window.java</h2></a>
                 <p>window.java is a class that creates and handles the window of your game.</p>
 
                 <div class="line"></div>
 
-                <h3>setWindowSize();</h3>
+                <a name="setwindowsize"><h3>setWindowSize();</h3></a>
                 <p>The setWindowSize(); method simply sets the size of your game's window. This method takes the parameters:</p>
                 <ul class="parameterlist">
                     <li>int width - how wide you want your window to be -- usually a multiple of 32 or 64</li>
